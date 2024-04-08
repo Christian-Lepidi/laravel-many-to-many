@@ -7,8 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    protected $fillable = ["title", "description", "date_of_publication"];
+
     public function type()
     {
+
+
         return $this->belongsTo(Type::class);
     }
 

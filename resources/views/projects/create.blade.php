@@ -23,10 +23,11 @@
          <input type="text" name="date-of-publication" id="date-of-publication" class="form-control" required>
         </div>
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 my-3">
            @foreach($technologies as $technology)
     
-           
+           <input type="checkbox" name="technologies" id="technologies" class="form-check-input">
+           <label for="technologies" class="form-check-label">{{$technology->name}}</label>
 
            @endforeach
           </div>

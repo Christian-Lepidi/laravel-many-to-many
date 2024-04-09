@@ -27,7 +27,7 @@ class ProjectController extends Controller
     public function create()
     {
         $technologies = Technology::all();
-        return view("projects.create", compact('projects', 'technologies'));
+        return view("projects.create", compact('technologies'));
     }
 
     /**
@@ -67,7 +67,7 @@ class ProjectController extends Controller
     public function edit(Project $project)
     {
         $technologies = Technology::all();
-        return view("projects.edit", compact("projects", 'technologies'));
+        return view("projects.edit", compact("project", 'technologies'));
     }
 
     /**

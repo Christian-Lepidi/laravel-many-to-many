@@ -13,6 +13,7 @@
             <th>Titolo</th>
             <th>Descrizione</th>
             <th>Data di pubblicazione </th>
+            <th>Tecnologie utilizzate</th>
             
             <th></th>
           </tr>
@@ -24,6 +25,13 @@
             <td>{{$project->title}}</td>
             <td>{{$project->description}}</td>
             <td>{{$project->date_of_publication}}</td>
+            <td>
+             @forelse($project->technologies as $technology)
+             {{$technology->name}}
+             @empty
+             @endforelse
+
+            </td>
             <td>
               <a href="{{route('projects.show', $project)}}">Dettagli</a>
               <a href="{{route('projects.edit', $project)}}">Modifica</a>

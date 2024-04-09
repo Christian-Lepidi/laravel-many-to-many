@@ -19,7 +19,7 @@
         </div>
         <div class="col-6">
           @foreach ($project->technologies as $technology)
-           {{$technology->name}}
+           {{$technology->name}}<span> </span>
               
           @endforeach
         </div>

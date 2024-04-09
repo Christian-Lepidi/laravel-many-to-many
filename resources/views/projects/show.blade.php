@@ -16,7 +16,13 @@
         <div class="col-6 my-4">
           <h2 class="h4 text-center">Data di pubblicazione</h2> 
           <div class="text-center">{{$project->date_of_publication}}</div> 
-      </div>
+        </div>
+        <div class="col-6">
+          @foreach ($project->technologies as $technology)
+           {{$technology->name}}
+              
+          @endforeach
+        </div>
       </div>
     </div>
 </section> 

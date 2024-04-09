@@ -2,7 +2,7 @@
 
 @section('title', 'Modifica '. $project->title)
 
-@section('main-content')
+@section('content')
   <section>
     <div class="container py-4">
         <a class="btn btn-primary mb-3" href="{{route('projects.index')}}">Torna alla lista</a>  
@@ -17,11 +17,11 @@
         </div> 
         <div class="col-4"> 
          <label for="description" class="form-label">Descrizione</label>    
-         <input value="{{$project->type}}" type="text" name="description" id="description" class="form-control" required>
+         <input value="{{$project->description}}" type="text" name="description" id="description" class="form-control" required>
         </div>
         <div class="col-4">
            <label for="sale_date" class="form-label">Data di pubblicazione</label>   
-           <input value="{{$project->sale_date}}" type="text" name="sale_date" id="sale_date" class="form-control" required>
+           <input value="{{$project->date_of_publication}}" type="text" name="date_of_publication" id="date_of_publication" class="form-control" required>
         </div>
         
         <div class="col-3">   

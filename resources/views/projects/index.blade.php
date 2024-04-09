@@ -26,10 +26,10 @@
             <td>{{$project->description}}</td>
             <td>{{$project->date_of_publication}}</td>
             <td>
-             @forelse($project->technologies as $technology)
+             @foreach($project->technologies as $technology)
              {{$technology->name}}
-             @empty
-             @endforelse
+             
+             @endforeach
 
             </td>
             <td>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Models\Technology;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -25,7 +26,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view("projects.create");
+        $technologies = Technology::all();
+        return view("projects.create", compact('projects', 'technologies'));
     }
 
     /**
@@ -64,7 +66,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view("projects.edit", compact("project"));
+        $technologies = Technology::all();
+        return view("projects.edit", compact("projects", 'technologies'));
     }
 
     /**

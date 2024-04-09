@@ -22,5 +22,6 @@
             </div>
         </div>
     </div>
+    <a href="{{route('projects.create')}}" class="btn btn-primary my-3">Crea</a>
 </div>
 @endsection

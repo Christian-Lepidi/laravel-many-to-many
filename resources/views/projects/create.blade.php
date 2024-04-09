@@ -22,9 +22,17 @@
          <label for="date-of-publication" class="form-label">Data di pubblicazione</label>      
          <input type="text" name="date-of-publication" id="date-of-publication" class="form-control" required>
         </div>
-        
+        <div class="row">
+          <div class="col-12">
+           @foreach($technologies as $technology)
+    
+           
+
+           @endforeach
+          </div>
         </div>
-        <div class="col-3">   
+        
+        <div class="col-3 ">   
          <button class="btn btn-success">Salva</button>
         </div>
       </form>
